@@ -34,16 +34,23 @@ def isPost(url):
 i = 0 
 subreddits = ['woooosh','hmmm','memes','dankmemes','pics',
 			'PewdiepieSubmissions','ExpectationVsReality','BeAmazed','Memes_Of_The_Dank',
-			'madlads','lostredditors','PornhubComments']
+			'madlads','lostredditors','PornhubComments','funny','Tinder','MemeEconomy','me_irl']
 
 print('POSTS')
 file = open("post.txt", "a")
 access = True
 for sub in subreddits:
-	for submission in reddit.subreddit(sub).rising(limit=3):
+	for submission in reddit.subreddit(sub).rising(limit=4):
 		if submission.url[-3:] == 'jpg' or submission.url[-3:] == 'png':
 			if isPost(submission.url) == False:
-				caption = "Posted on r/" + sub + " by u/" + str(submission.author) + " : " +  submission.title + " #memeboi #dank #bot"
+				# caption = "Posted on r/" + sub + " by u/" + str(submission.author) + " : "\
+				# +  submission.title + " #memeboi #dank #bot"
+				
+				caption = "" + str(submission.title) +  "\n. \n. \n. \n. \n. \n. \nPosted on r/"+ sub + "" \
+				" by u/" + str(submission.author) +"\nFollow this GOOD BOT to make your day :) \n" \
+				" #memeboi #meme #bot #reddit #dankmemes #follow4follow #funny #pics #dank #controversial"\
+				" #AI #top #best #hot #super #money"
+
 				urllib.request.urlretrieve(submission.url, str(i) + '.jpg')
 				print(str(submission.author))
 				print('Download finished ...')
@@ -62,8 +69,4 @@ for sub in subreddits:
 			else:
 				print('Already posted')
 file.close()				
-
 print('Finished :)')
-
-
-
