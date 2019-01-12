@@ -61,11 +61,11 @@ for sub in subreddits:
 			if isPost(submission.url) == False:
 				caption = "Posted on r/" + sub + " by u/" + str(submission.author) + " : " +  submission.title + " #memeboi #dank #bot"
 				urllib.request.urlretrieve(submission.url, str(i) + '.jpg')
-				# print(str(submission.author))
+				print(str(submission.author))
 				print('Download finished ...')
 				print('Uploading ...')
 				try :				
-					photo_path = '/home/kartikey/Desktop/Files/Insta_Bot/0.jpg'
+					photo_path = '/home/ec2-user/Desktop/InstagramBot/0.jpg'
 					InstagramAPI.uploadPhoto(photo_path, caption=caption)
 					file.write(str(submission.url)+'\n')
 					print('Posted ...')
