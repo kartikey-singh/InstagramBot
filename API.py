@@ -18,6 +18,22 @@ reddit = praw.Reddit(client_id='ylD5CIG9XDPtJA',
 					 client_secret='IRZ4big6rczalpMLdKq3t-1FLho',
 					 user_agent='my user agent')
 
+def followTheFollowers():
+	followers = list(InstagramAPI.getTotalSelfFollowers())
+	for follower in followers:
+		InstagramAPI.follow(follwer['pk'])
+	return None
+
+def followRequester():
+	ls = list(InstagramAPI.getTotalSelfFollowings())
+	print("-----",len(ls))
+	for l in ls:
+		print(l['pk'])	
+	return None				
+
+
+print("Caption \n. \n. \n. \n. \n. \n. \nPosted on r/xyz by u/xyz \nFollow this GOOD BOT to make your day :) \n#memeboi #meme #bot #reddit #dankmemes #follow4follow #funny #pics #dank #controversial #AI #top #best #hot #super #money")
+
 file = open("post.txt", "r")
 post_data = []
 
