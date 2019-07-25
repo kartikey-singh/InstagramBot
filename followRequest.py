@@ -5,7 +5,7 @@
 from InstagramAPI import InstagramAPI
 import random
 
-InstagramAPI = InstagramAPI("meme.bot.69", "Narutogre8!")
+InstagramAPI = InstagramAPI("meme.bot.69", "********")
 InstagramAPI.login()  # login
 
 def followRequester():
