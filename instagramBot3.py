@@ -11,7 +11,7 @@ non_bmp_map = dict.fromkeys(range(0x10000, sys.maxunicode + 1), 0xfffd)
 # Automate Script Calling
 from InstagramAPI import InstagramAPI
 
-InstagramAPI = InstagramAPI("meme.bot.69", "Narutogre8!")
+InstagramAPI = InstagramAPI("meme.bot.69", "*******")
 InstagramAPI.login()  # login
 
 reddit = praw.Reddit(client_id='ylD5CIG9XDPtJA',
