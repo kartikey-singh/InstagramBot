@@ -23,7 +23,7 @@ def login():
 	time.sleep(3)
 	driver.find_element_by_name("username").send_keys('meme.bot.stealer@gmail.com')
 	passwordInput = driver.find_element_by_name("password")
-	passwordInput.send_keys('Narutogre8!')
+	passwordInput.send_keys('*******')
 	passwordInput.send_keys(Keys.ENTER)
 	time.sleep(3)
 	try:
