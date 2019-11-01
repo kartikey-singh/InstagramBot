@@ -6,7 +6,7 @@ imageio==2.1.2
 InstagramAPI==1.0.2
 moviepy==0.2.3.2
 numpy==1.15.4
-Pillow==5.4.0
+Pillow==6.2.0
 praw==6.0.0
 prawcore==1.0.0
 requests==2.11.1
